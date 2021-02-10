@@ -20,16 +20,14 @@ const checkInput = () => {
     if (input.value !== "" && input.value.slice(-1) === "?") {
         generateAnswer();
         error.textContent = "";
-        ball.classList.remove("shake-animation");
     } else if (input.value !== "" && input.value.slice(-1) !== "?") {
         error.textContent = "Pytanie musi być zakończone znakiem '?'.";
         answer.textContent = "";
-        ball.classList.remove("shake-animation");
     } else {
         error.textContent = "Musisz zadać jakieś pytanie!";
         answer.textContent = "";
-        ball.classList.remove("shake-animation");
     }
+    ball.classList.remove("shake-animation");
 };
 
 const generateAnswer = () => {
